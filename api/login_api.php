@@ -41,7 +41,7 @@ try {
     echo json_encode([
         "success" => true,
         "message" => "Login exitoso.",
-        "redirect" => "../modules/views/index.php" // aquí mandamos a tu dashboard
+        "redirect" => "http://localhost/prodent-soporte/index.php" // aquí mandamos a tu dashboard
     ]);
 
 } catch (Exception $e) {

@@ -114,7 +114,7 @@ class BasicLoginForm {
             successBox.classList.add('fade-in');
 
             setTimeout(() => {
-                window.location.href = data.redirect || 'index.php';
+                window.location.href = data.redirect || 'http://localhost/prodent-soporte/index.php';
             }, 2000);
 
         } catch (err) {
@@ -137,7 +137,7 @@ class BasicLoginForm {
         }
 
         setTimeout(() => {
-            window.location.href = '/dashboard.html';
+            window.location.href = 'http://localhost/prodent-soporte/index.php';
         }, 2000);
     }
 }

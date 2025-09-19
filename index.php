@@ -1,69 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Login Form</title>
-    <link rel="stylesheet" href="./public/css/style.css">
-</head>
-<body>
-    <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <h2>Prodent</h2>
-                <p>Ingrese sus credenciales para acceder a su cuenta</p>
-            </div>
+<?php include "./includes/header.php"; ?>
 
-            <form class="login-form" id="loginForm" novalidate>
-                <!-- <div class="form-group">
-                    <div class="input-wrapper">
-                        <input type="email" id="email" name="email" required autocomplete="email">
-                        <label for="email">Email Address</label>
-                    </div>
-                    <span class="error-message" id="emailError"></span>
-                </div> -->
-
-                <div class="form-group">
-                    <div class="input-wrapper password-wrapper">
-                        <input type="password" id="password" name="password" required autocomplete="current-password">
-                        <label for="password">Password</label>
-                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Show password" aria-pressed="false">
-                            <span class="eye-icon"></span>
-                        </button>
-                    </div>
-                    <span class="error-message" id="passwordError"></span>
-                </div>
-
-                <div class="form-options">
-                    <label class="remember-wrapper">
-                        <input type="checkbox" id="remember" name="remember">
-                        <span class="checkbox-label">
-                            <span class="checkmark"></span>
-                            Recuerdame
-                        </span>
-                    </label>
-                    <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
-                </div>
-
-                <button type="submit" class="login-btn">
-                    <span class="btn-text">Iniciar sesión</span>
-                    <span class="btn-loader"></span>
-                </button>
-            </form>
-
-            <!-- <div class="signup-link">
-                <p>Don't have an account? <a href="#">Create one</a></p>
-            </div> -->
-
-            <div class="success-message" id="successMessage">
-                <div class="success-icon">✓</div>
-                <h3>Login Successful!</h3>
-                <p>Redirecting to your dashboard...</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="./public/js/form-utils.js"></script>
-    <script src="./public/js/script.js"></script>
+<!-- MAIN -->
+		<main>
+			<h1 class="title">Dashboard</h1>
+			<ul class="breadcrumbs">
+				<li><a href="#">Home</a></li>
+				<li class="divider">/</li>
+				<li><a href="#" class="active">Dashboard</a></li>
+			</ul>
+			<div class="info-data">
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>1500</h2>
+							<p>Traffic</p>
+						</div>
+						<i class='bx bx-trending-up icon' ></i>
+					</div>
+					<span class="progress" data-value="40%"></span>
+					<span class="label">40%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>234</h2>
+							<p>Sales</p>
+						</div>
+						<i class='bx bx-trending-down icon down' ></i>
+					</div>
+					<span class="progress" data-value="60%"></span>
+					<span class="label">60%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>465</h2>
+							<p>Pageviews</p>
+						</div>
+						<i class='bx bx-trending-up icon' ></i>
+					</div>
+					<span class="progress" data-value="30%"></span>
+					<span class="label">30%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>235</h2>
+							<p>Visitors</p>
+						</div>
+						<i class='bx bx-trending-up icon' ></i>
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+			</div>
+			<div class="data">
+				<div class="content-data">
+					<div class="head">
+						<h3>Sales Report</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="chart">
+						<div id="chart"></div>
+					</div>
+				</div>
+				<div class="content-data">
+					<div class="head">
+						<h3>Chatbox</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="chat-box">
+						<p class="day"><span>Today</span></p>
+						<div class="msg">
+							<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+							<div class="chat">
+								<div class="profile">
+									<span class="username">Alan</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>Hello</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+									<span class="time">18:30</span>
+								</div>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum eos quam dolores eligendi exercitationem animi nobis reprehenderit laborum! Nulla.</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+									<span class="time">18:30</span>
+								</div>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto!</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+									<span class="time">18:30</span>
+								</div>
+								<p>Lorem ipsum, dolor sit amet.</p>
+							</div>
+						</div>
+					</div>
+					<form action="#">
+						<div class="form-group">
+							<input type="text" placeholder="Type...">
+							<button type="submit" class="btn-send"><i class='bx bxs-send' ></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+<!-- /MAIN -->
+</section> 
+<script src="/prodent-soporte/assets/js/apexcharts.js"></script>
+<script src="/prodent-soporte/assets/js/script_dashboard.js"></script>
 </body>
 </html>
