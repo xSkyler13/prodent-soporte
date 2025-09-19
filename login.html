@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodent - Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Prodent</h2>
+                <p>Ingrese sus credenciales para acceder a su cuenta</p>
+            </div>
+
+            <!-- ✅ Ya no enviamos el form con action, el script.js se encarga vía fetch -->
+            <form class="login-form" id="loginForm" method="POST" novalidate>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <label for="email">Correo electrónico</label>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper password-wrapper">
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                        <label for="password">Contraseña</label>
+                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Mostrar contraseña" aria-pressed="false">
+                            <span class="eye-icon"></span>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-wrapper">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkbox-label">
+                            <span class="checkmark"></span>
+                            Recuérdame
+                        </span>
+                    </label>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Iniciar sesión</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage" style="display:none;">
+                <div class="success-icon">✓</div>
+                <h3>¡Login exitoso!</h3>
+                <p>Redirigiendo al panel...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Scripts -->
+    <script src="assets/js/form-utils.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

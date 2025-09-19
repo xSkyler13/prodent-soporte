@@ -1,0 +1,2 @@
+[19-Sep-2025 08:46:53 Europe/Berlin] PHP Warning:  Undefined array key "clave" in C:\xampp\htdocs\prodent-soporte\api\login_api.php on line 31
+[19-Sep-2025 08:46:53 Europe/Berlin] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in C:\xampp\htdocs\prodent-soporte\api\login_api.php on line 31
