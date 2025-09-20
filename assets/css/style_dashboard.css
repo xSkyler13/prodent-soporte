@@ -353,7 +353,7 @@ main .breadcrumbs li.divider {
 	pointer-events: none;
 }
 main .info-data {
-	margin-top: 36px;
+	/* margin-top: 36px; */
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	grid-gap: 20px;
@@ -578,13 +578,154 @@ main .btn-send:hover {
 	background: var(--dark-blue);
 }
 /* MAIN */
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+}
+/* Form Styles */
+/* Contenedor general (card) */
+.card {
+	margin-top: 20px;
+    background: var(--light);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+	overflow: hidden;
+}
+/* Cabecera */
+.card-header {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Cuerpo */
+.card-body {
+    padding: 15px;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+	min-width: 600px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table thead {
+    background: #f4f4f4;
+}
+
+.table thead th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+	white-space: nowrap;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.table tbody td {
+    padding: 10px;
+	white-space: nowrap;
+}
+
+/* Hover */
+.table tbody tr:hover {
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Ícono de cabecera */
+.card-header i {
+    font-size: 18px;
+    color: #555;
+}
+
+
 /* CONTENT */
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 	#content {
 		position: relative;

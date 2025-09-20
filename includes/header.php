@@ -6,6 +6,8 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.html");
     exit;
 }
+// Detectar la página actual
+$current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,29 +25,30 @@ if (!isset($_SESSION['user_id'])) {
 	<section id="sidebar">
 		<a href="#" class="brand"><i class="fa-solid fa-tooth"></i> Prodent</a>
 		<ul class="side-menu">
-			<li><a href="index.php" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
+			<li><a href="/prodent-soporte/index.php" class="<?= ($current_page == 'index.php') ? 'active' : '' ?>"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
 			<li class="divider" data-text="main">Main</li>
 			<li>
-				<a href="#"><i class='bx bxs-inbox icon'></i> Elements <i class='bx bx-chevron-right icon-right'></i></a>
-				<ul class="side-dropdown">
+				<a href="#"><i class='bx bxs-inbox icon'></i> Documentos</a>
+				<!-- <ul class="side-dropdown">
 					<li><a href="#">Alert</a></li>
 					<li><a href="#">Badges</a></li>
 					<li><a href="#">Breadcrumbs</a></li>
 					<li><a href="#">Button</a></li>
-				</ul>
+				</ul> -->
 			</li>
-			<li><a href="#"><i class='bx bxs-chart icon'></i> Charts</a></li>
-			<li><a href="#"><i class='bx bxs-widget icon'></i> Widgets</a></li>
+			<li><a href="#"><i class='bx bxs-chart icon'></i> Crear cita</a></li>
+			<li><a href="#"><i class='bx bxs-widget icon'></i> Pacientes</a></li>
 			<li class="divider" data-text="table and forms">Table and forms</li>
-			<li><a href="#"><i class='bx bx-table icon'></i> Tables</a></li>
+			<li><a href="/prodent-soporte/views/citas.php" class="<?= ($current_page == 'citas.php') ? 'active' : '' ?>"><i class='bx bx-table icon'></i> Citas</a></li>
 			<li>
-				<a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a>
+				<!-- <a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a>
 				<ul class="side-dropdown">
 					<li><a href="#">Basic</a></li>
 					<li><a href="#">Select</a></li>
 					<li><a href="#">Checkbox</a></li>
 					<li><a href="#">Radio</a></li>
-				</ul>
+				</ul> -->
+				<a href="#"><i class='bx bx-table icon'></i> Usuarios</a>
 			</li>
 		</ul>
 	</section>
@@ -61,14 +64,14 @@ if (!isset($_SESSION['user_id'])) {
 					<i class='bx bx-search icon'></i>
 				</div>
 			</form>
-			<a href="#" class="nav-link">
+			<!-- <a href="#" class="nav-link">
 				<i class='bx bxs-bell icon'></i>
 				<span class="badge">5</span>
-			</a>
-			<a href="#" class="nav-link">
+			</a> -->
+			<!-- <a href="#" class="nav-link">
 				<i class='bx bxs-message-square-dots icon'></i>
 				<span class="badge">8</span>
-			</a>
+			</a> -->
 			<span class="divider"></span>
 			<div class="profile">
 				<img src="<?php echo $_SESSION['foto'] ?? '/prodent-soporte/assets/img/default.png'; ?>" alt="">
