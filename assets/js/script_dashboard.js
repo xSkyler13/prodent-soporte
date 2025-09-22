@@ -71,9 +71,6 @@ toggleSidebar.addEventListener('click', function () {
 	}
 })
 
-
-
-
 sidebar.addEventListener('mouseleave', function () {
 	if(this.classList.contains('hide')) {
 		allDropdown.forEach(item=> {
@@ -155,7 +152,31 @@ window.addEventListener('click', function (e) {
 })
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalRegistrar");
+  const btnAbrir = document.getElementById("btnAbrirModal");
+  const btnCerrar = document.getElementById("btnCerrarModal");
+  const btnCerrar2 = document.getElementById("btnCerrarModal2");
 
+  btnAbrir.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  btnCerrar.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  btnCerrar2.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Cerrar si se hace clic fuera del modal
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
 
 
 // PROGRESSBAR
@@ -164,8 +185,6 @@ const allProgress = document.querySelectorAll('main .card .progress');
 allProgress.forEach(item=> {
 	item.style.setProperty('--value', item.dataset.value)
 })
-
-
 
 
 
