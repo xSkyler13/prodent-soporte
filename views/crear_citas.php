@@ -47,14 +47,21 @@ include "../includes/header.php";
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="fecha_inicio">Fecha Inicio:</label>
-                    <input type="date" id="fecha_inicio" name="fecha_inicio">
+                    <div class="input-group" id="datetimepicker">
+                        <input type="text" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Selecciona fecha y hora">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar-event"></i> <!-- si usas Bootstrap Icons -->
+                        </span>
+                    </div>
                 </div>
+
                 <div class="form-group">
                     <label for="estado_facturacion">Estado Facturación:</label>
-                    <select id="estado_facturacion" name="estado_facturacion">
+                    <select id="estado_facturacion" name="estado_facturacion" class="form-control">
                         <option value="">Todos</option>
                         <option value="pendiente">Pendiente</option>
                         <option value="pagado">Pagado</option>
@@ -62,6 +69,7 @@ include "../includes/header.php";
                     </select>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="detalle">Descripción:</label>
                 <textarea id="detalle" name="detalle" rows="4" placeholder="Ingrese la descripción de la cita..."></textarea>
@@ -81,6 +89,33 @@ include "../includes/header.php";
 
 </main>
 </section> 
+<script>
+    const element = document.getElementById('datetimepicker');
+    const picker = new tempusDominus.TempusDominus(element, {
+        localization: {
+            locale: 'es', // idioma español
+            hourCycle: 'h12',
+        },
+        display: {
+            components: {
+                calendar: true,
+                date: true,
+                month: true,
+                year: true,
+                decades: true,
+                clock: true,  // activa el reloj
+                hours: true,
+                minutes: true,
+                seconds: false
+            },
+            icons: {
+                time: 'fas fa-clock',
+            }
+        },
+        useCurrent: false
+    });
+</script>
+
 <script src="/prodent-soporte/assets/js/apexcharts.js"></script>
 <script src="/prodent-soporte/assets/js/script_dashboard.js"></script>
 </body>

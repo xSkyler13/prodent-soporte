@@ -158,25 +158,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnCerrar = document.getElementById("btnCerrarModal");
   const btnCerrar2 = document.getElementById("btnCerrarModal2");
 
+  // Abrir modal
   btnAbrir.addEventListener("click", () => {
-    modal.style.display = "flex";
+    modal.classList.remove("hide");
+    modal.style.display = "flex"; // aseguro que aparezca
+    setTimeout(() => modal.classList.add("show"), 10); // delay para animación
   });
 
-  btnCerrar.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  // Función para cerrar con animación
+  const cerrarModal = () => {
+    modal.classList.remove("show");
+    modal.classList.add("hide");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 100); // mismo tiempo que el transition en CSS
+  };
 
-  btnCerrar2.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  btnCerrar.addEventListener("click", cerrarModal);
+  btnCerrar2.addEventListener("click", cerrarModal);
 
   // Cerrar si se hace clic fuera del modal
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.style.display = "none";
+      cerrarModal();
     }
   });
 });
+
 
 
 // PROGRESSBAR

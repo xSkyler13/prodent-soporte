@@ -16,7 +16,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+	
 	<link rel="stylesheet" href="/prodent-soporte/assets/css/style_dashboard.css">
+	<link rel="stylesheet" href="/prodent-soporte/assets/css/tempus-dominus.min.css">
+	<script src="/prodent-soporte/assets/js/tempus-dominus.min.js"></script>
+	<script src="/prodent-soporte/assets/js/popper.min.js"></script>
 	<title>Prodent</title>
 </head>
 <body>

@@ -17,26 +17,26 @@ include "../includes/header.php";
                 <h3><i class='bx bx-filter'></i> Filtros y Reportes</h3>
             </div>
             <form action="index.php" method="GET" class="filter-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="termino" class="form-label">Nombre/Empresa:</label>
-                        <input type="text" id="termino" name="termino" placeholder="Ingrese nommbre o empresa" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="cliente_nombre" class="form-label">Teléfono:</label>
-                        <input type="text" id="cliente_nombre" name="cliente_nombre" placeholder="Escribe teléfono:..." value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="cliente_nombre" class="form-label">Pais:</label>
-                        <input type="text" id="cliente_nombre" name="cliente_nombre" placeholder="Escriba el pais:..." value="">
-                    </div>
-                </div>
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="termino" class="form-label">Nombre/Empresa:</label>
+                      <input type="text" id="termino" name="termino" placeholder="Ingrese nommbre o empresa" value="">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente_nombre" class="form-label">Teléfono:</label>
+                      <input type="text" id="cliente_nombre" name="cliente_nombre" placeholder="Escribe teléfono:..." value="">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente_nombre" class="form-label">Pais:</label>
+                      <input type="text" id="cliente_nombre" name="cliente_nombre" placeholder="Escriba el pais:..." value="">
+                  </div>
+              </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary"><i class='bx bx-search'></i> Filtrar</button>
-                    <button type="reset" class="btn btn-secondary"><i class='bx bx-eraser'></i> Limpiar</button>
-                    <button type="button" class="btn btn-primary" id="btnAbrirModal"><i class="fa-solid fa-save"></i> Registrar</button>
-                </div>
+              <div class="form-actions">
+                  <button type="submit" class="btn btn-primary"><i class='bx bx-search'></i> Filtrar</button>
+                  <button type="reset" class="btn btn-secondary"><i class='bx bx-eraser'></i> Limpiar</button>
+                  <button type="button" class="btn btn-primary" id="btnAbrirModal"><i class="fa-solid fa-save"></i> Registrar</button>
+              </div>
             </form>
         </div>
     </div>
@@ -96,48 +96,70 @@ include "../includes/header.php";
   <div class="modal-content">
     <span class="modal-close" id="btnCerrarModal">&times;</span>
     <h2><i class="fa-solid fa-user-plus"></i> Registrar Paciente</h2>
+    <div class="form-container">
+      <form action="../api/guardar_paciente.php" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa (Opcional)</label>
+            <input type="text" id="empresa" name="empresa" class="form-control">
+          </div>
+        </div>
 
-    <form action="../api/guardar_paciente.php" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="nombre">Nombre Completo</label>
-        <input type="text" id="nombre" name="nombre" class="form-control" required>
-      </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class= "form-container" for="correo">Correo Electronico</label>
+            <input type="email" id="correo" name="correo" class="form-control">
+          </div>
+        </div>
 
-      <div class="form-group">
-        <label for="empresa">Empresa</label>
-        <input type="text" id="empresa" name="empresa" class="form-control">
-      </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class= "form-container" for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class= "form-container" for="whatsapp">WhatsApp</label>
+            <input type="text" id="whatsapp" name="whatsapp" class="form-control">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class= "form-container" for="pais">País</label>
+            <input type="text" id="pais" name="pais" class="form-control">
+          </div>
 
-      <div class="form-group">
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" class="form-control">
-      </div>
+          <div class="form-group">
+            <label class= "form-container" for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" class="form-control">
+          </div>
+        </div>
 
-      <div class="form-group">
-        <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" name="telefono" class="form-control">
-      </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class= "form-container" for="detalle">Detalle</label>
+            <textarea id="detalle" name="detalle" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
 
-      <div class="form-group">
-        <label for="pais">País</label>
-        <input type="text" id="pais" name="pais" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <label for="detalle">Detalle</label>
-        <textarea id="detalle" name="detalle" class="form-control" rows="3"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Adjuntar Archivos</label>
-        <input type="file" name="archivo[]" multiple class="form-control">
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Guardar</button>
-        <button type="button" class="btn btn-secondary" id="btnCerrarModal2"><i class="fa-solid fa-xmark"></i> Cancelar</button>
-      </div>
-    </form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class= "form-container" >Adjuntar Archivos</label>
+            <input type="file" name="archivo[]" multiple class="form-control">
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Guardar</button>
+          <button type="button" class="btn btn-secondary" id="btnCerrarModal2"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 </section> 
