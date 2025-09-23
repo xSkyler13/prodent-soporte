@@ -1,20 +1,19 @@
 <?php
 require_once "/../config/config.php";
 
-// Consulta de citas
-$sql = "SELECT id, asunto, fecha_inicio, fecha_fin FROM citas";
-$result = $conn->query($sql);
+// Conexión a la BD
+$conexion = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-$events = [];
+$eventos = [];
+$resultado = $conexion->query("SELECT id, titulo, fecha_inicio, fecha_fin FROM citas");
 
-while ($row = $result->fetch_assoc()) {
-    $events[] = [
+while($row = $resultado->fetch_assoc()) {
+    $eventos[] = [
         'id' => $row['id'],
-        'title' => $row['asunto'],
+        'title' => $row['titulo'],
         'start' => $row['fecha_inicio'],
         'end'   => $row['fecha_fin']
     ];
 }
 
-header('Content-Type: application/json');
-echo json_encode($events);
+echo json_encode($eventos);

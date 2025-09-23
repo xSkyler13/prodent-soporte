@@ -50,7 +50,7 @@ include "../includes/header.php";
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="fecha_inicio">Fecha Inicio:</label>
+                    <label for="fecha_inicio">Fecha de Inicio:</label>
                     <div class="input-group" id="datetimepicker">
                         <input type="text" id="fecha_inicio" name="fecha_inicio" class="form-control" placeholder="Selecciona fecha y hora">
                         <span class="input-group-text">
@@ -60,7 +60,7 @@ include "../includes/header.php";
                 </div>
 
                 <div class="form-group">
-                    <label for="estado_facturacion">Estado Facturación:</label>
+                    <label for="estado_facturacion">Estado de Pago:</label>
                     <select id="estado_facturacion" name="estado_facturacion" class="form-control">
                         <option value="">Todos</option>
                         <option value="pendiente">Pendiente</option>

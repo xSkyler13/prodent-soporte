@@ -823,8 +823,6 @@ input[type="file"].form-control:focus {
 	padding-top: 10px;
 }
 
-
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -841,4 +839,19 @@ input[type="file"].form-control:focus {
 	nav .divider {
 		display: none;
 	}
+}
+
+@media (max-width: 768px) {
+  .fc-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fc-toolbar-chunk {
+    text-align: center;
+  }
+
+  #calendar {
+    font-size: 12px; /* achica fuentes */
+  }
 }

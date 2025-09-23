@@ -140,19 +140,19 @@ include "../includes/header.php";
           </div>
         </div>
 
-        <div class="form-row">
+        <!-- <div class="form-row">
           <div class="form-group">
             <label class= "form-container" for="detalle">Detalle</label>
             <textarea id="detalle" name="detalle" class="form-control" rows="3"></textarea>
           </div>
-        </div>
+        </div> -->
 
-        <div class="form-row">
+        <!-- <div class="form-row">
           <div class="form-group">
             <label class= "form-container" >Adjuntar Archivos</label>
             <input type="file" name="archivo[]" multiple class="form-control">
           </div>
-        </div>
+        </div> -->
         
         <div class="form-actions">
           <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Guardar</button>

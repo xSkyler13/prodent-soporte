@@ -15,33 +15,29 @@ include "../includes/header.php";
 
     <div class="card">
         <div class="card-body">
+            <!-- Contenedor del calendario -->
             <div id="calendar"></div>
         </div>
     </div>
 </main>
-</section>
-
-<!-- FullCalendar -->
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js'></script>
+<!-- FullCalendar JS -->
+<script src="../assets/js/index.global.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    let calendarEl = document.getElementById('calendar');
+    var calendarEl = document.getElementById('calendar');
 
-    let calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        locale: 'es',
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth', // vista inicial tipo Google Calendar
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
         },
-        events: '/prodent-soporte/api/get_events.php', // aquí traemos los eventos de PHP
-        eventColor: '#0d6efd',
-        eventClick: function(info) {
-            alert("Cita: " + info.event.title + "\nFecha: " + info.event.start.toLocaleString());
-        }
+        navLinks: true, // permite clickear días o semanas
+        selectable: true,
+        editable: true,
+        events: 'cargar_eventos.php', // aquí irán tus citas desde la BD
     });
 
     calendar.render();
