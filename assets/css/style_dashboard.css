@@ -108,6 +108,7 @@ li {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
+	font-weight: 800;
 	color: var(--dark);
 	padding: 12px 16px 12px 0;
 	transition: all .3s ease;
@@ -612,6 +613,7 @@ main .btn-send:hover {
 }
 
 .form-actions {
+	justify-content: flex-end;
     margin-top: 15px;
     display: flex;
     gap: 10px;
@@ -644,6 +646,15 @@ main .btn-send:hover {
 
 .btn-secondary:hover {
     background-color: #4b5563;
+}
+
+.btn-delete {
+    background-color: #d10000;
+    color: #fff;
+}
+
+.btn-delete:hover {
+	background-color: #a70000;
 }
 /* Form Styles */
 /* Contenedor general (card) */
@@ -705,6 +716,11 @@ main .btn-send:hover {
 
 .table tbody tr:nth-child(even) {
     background: #fafafa;
+}
+.table tbody td .actions{
+
+	display: flex; 
+	gap: 0.5rem;
 }
 
 .table tbody td {
@@ -801,7 +817,12 @@ input[type="file"].form-control:focus {
   transform: translateY(0);
   opacity: 1;
 }
-
+.modal.show .modal-content .heads{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
 /* Ocultar modal (animación hacia arriba) */
 .modal.hide .modal-content {
   transform: translateY(-50px);
@@ -819,13 +840,20 @@ input[type="file"].form-control:focus {
   background: transparent;
 }
 
-.form-container{
-	padding-top: 10px;
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* En pantallas grandes, todo normal */
+@media (min-width: 769px) {
+  .form-actions button {
+    font-size: 14px;
+  }
+  .form-actions button i {
+    margin-right: 5px;
+  }
 }
 
 /* CONTENT */
@@ -853,5 +881,19 @@ input[type="file"].form-control:focus {
 
   #calendar {
     font-size: 12px; /* achica fuentes */
+  }
+
+  .form-actions {
+    justify-content: center; /* centrar botones */
+    flex-wrap: wrap; /* si son muchos, que bajen en otra línea */
+  }
+
+  .form-actions button {
+    padding: 8px 10px; /* achicar un poco */
+	/* font-size: 0; */
+  }
+  .form-actions button i {
+    margin-right: 0; /* quitar espacio entre ícono y texto */
+	font-size: 18px;
   }
 }

@@ -17,4 +17,10 @@ try {
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
+
+// $host = 'sql5.freesqldatabase.com';
+// $dbname = 'sql5799965'; // El nombre que usaste al crear la BD
+// $username = 'sql5799965'; // Usuario por defecto en XAMPP
+// $password = '2iWlhBI4FD';     // Contraseña por defecto en XAMPP es vacía
+// $charset = 'utf8mb4';
 ?>

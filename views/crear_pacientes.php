@@ -105,7 +105,7 @@ include "../includes/header.php";
             <input type="text" id="nombre" name="nombre" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="empresa">Empresa (Opcional)</label>
+            <label for="empresa">DNI</label>
             <input type="text" id="empresa" name="empresa" class="form-control">
           </div>
         </div>
@@ -113,6 +113,10 @@ include "../includes/header.php";
         <div class="form-row">
           <div class="form-group">
             <label class= "form-container" for="correo">Correo Electronico</label>
+            <input type="email" id="correo" name="correo" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class= "form-container" for="correo">Empresa (Opcional)</label>
             <input type="email" id="correo" name="correo" class="form-control">
           </div>
         </div>
@@ -127,33 +131,6 @@ include "../includes/header.php";
             <input type="text" id="whatsapp" name="whatsapp" class="form-control">
           </div>
         </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label class= "form-container" for="pais">País</label>
-            <input type="text" id="pais" name="pais" class="form-control">
-          </div>
-
-          <div class="form-group">
-            <label class= "form-container" for="ciudad">Ciudad</label>
-            <input type="text" id="ciudad" name="ciudad" class="form-control">
-          </div>
-        </div>
-
-        <!-- <div class="form-row">
-          <div class="form-group">
-            <label class= "form-container" for="detalle">Detalle</label>
-            <textarea id="detalle" name="detalle" class="form-control" rows="3"></textarea>
-          </div>
-        </div> -->
-
-        <!-- <div class="form-row">
-          <div class="form-group">
-            <label class= "form-container" >Adjuntar Archivos</label>
-            <input type="file" name="archivo[]" multiple class="form-control">
-          </div>
-        </div> -->
-        
         <div class="form-actions">
           <button type="submit" class="btn btn-primary"><i class="fa-solid fa-save"></i> Guardar</button>
           <button type="button" class="btn btn-secondary" id="btnCerrarModal2"><i class="fa-solid fa-xmark"></i> Cancelar</button>

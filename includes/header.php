@@ -32,7 +32,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 			<li><a href="/prodent-soporte/index.php" class="<?= ($current_page == 'index.php') ? 'active' : '' ?>"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
 			<li class="divider" data-text="main">Main</li>
 			<li>
-				<a href="#"><i class='bx bxs-inbox icon'></i> Documentos</a>
+				<a href="#"><i class='bx bxs-archive icon'></i> Documentos</a>
 				<!-- <ul class="side-dropdown">
 					<li><a href="#">Alert</a></li>
 					<li><a href="#">Badges</a></li>
@@ -40,8 +40,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 					<li><a href="#">Button</a></li>
 				</ul> -->
 			</li>
-			<li><a href="/prodent-soporte/views/crear_citas.php" class="<?= ($current_page == 'crear_citas.php') ? 'active' : '' ?>"><i class='bx bxs-chart icon'></i> Crear cita</a></li>
-			<li><a href="/prodent-soporte/views/crear_pacientes.php"class="<?= ($current_page == 'crear_pacientes.php') ? 'active' : '' ?>"><i class='bx bxs-widget icon'></i> Pacientes</a></li>
+			<li><a href="/prodent-soporte/views/crear_citas.php" class="<?= ($current_page == 'crear_citas.php') ? 'active' : '' ?>"><i class='bx bxs-file icon'></i> Crear cita</a></li>
+			<li><a href="/prodent-soporte/views/crear_pacientes.php"class="<?= ($current_page == 'crear_pacientes.php') ? 'active' : '' ?>"><i class='bx bxs-group icon'></i> Pacientes</a></li>
 			<li class="divider" data-text="table and forms">Table and forms</li>
 			<li><a href="/prodent-soporte/views/citas.php" class="<?= ($current_page == 'citas.php') ? 'active' : '' ?>"><i class='bx bx-table icon'></i>Calendario de Citas</a></li>
 			<li>
@@ -52,7 +52,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 					<li><a href="#">Checkbox</a></li>
 					<li><a href="#">Radio</a></li>
 				</ul> -->
-				<a href="#"><i class='bx bx-table icon'></i> Usuarios</a>
+				<a href="/prodent-soporte/views/reporte_usuarios.php"><i class='bx bxs-user icon'></i> Usuarios</a>
 			</li>
 		</ul>
 	</section>

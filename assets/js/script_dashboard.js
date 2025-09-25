@@ -1,12 +1,10 @@
 // SIDEBAR DROPDOWN
 const allDropdown = document.querySelectorAll('#sidebar .side-dropdown');
 const sidebar = document.getElementById('sidebar');
-
 allDropdown.forEach(item=> {
 	const a = item.parentElement.querySelector('a:first-child');
 	a.addEventListener('click', function (e) {
 		e.preventDefault();
-
 		if(!this.classList.contains('active')) {
 			allDropdown.forEach(i=> {
 				const aLink = i.parentElement.querySelector('a:first-child');
@@ -15,15 +13,12 @@ allDropdown.forEach(item=> {
 				i.classList.remove('show');
 			})
 		}
-
 		this.classList.toggle('active');
 		item.classList.toggle('show');
 	})
 })
 
-
 const links = document.querySelectorAll('.side-menu a');
-
 links.forEach(link => {
     link.addEventListener('click', function() {
         links.forEach(l => l.classList.remove('active'));
@@ -35,7 +30,6 @@ links.forEach(link => {
 // SIDEBAR COLLAPSE
 const toggleSidebar = document.querySelector('nav .toggle-sidebar');
 const allSideDivider = document.querySelectorAll('#sidebar .divider');
-
 if(sidebar.classList.contains('hide')) {
 	allSideDivider.forEach(item=> {
 		item.textContent = '-'
@@ -53,12 +47,10 @@ if(sidebar.classList.contains('hide')) {
 
 toggleSidebar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
-
 	if(sidebar.classList.contains('hide')) {
 		allSideDivider.forEach(item=> {
 			item.textContent = '-'
 		})
-
 		allDropdown.forEach(item=> {
 			const a = item.parentElement.querySelector('a:first-child');
 			a.classList.remove('active');
@@ -84,8 +76,6 @@ sidebar.addEventListener('mouseleave', function () {
 	}
 })
 
-
-
 sidebar.addEventListener('mouseenter', function () {
 	if(this.classList.contains('hide')) {
 		allDropdown.forEach(item=> {
@@ -101,26 +91,20 @@ sidebar.addEventListener('mouseenter', function () {
 
 
 
-
 // PROFILE DROPDOWN
 const profile = document.querySelector('nav .profile');
 const imgProfile = profile.querySelector('img');
 const dropdownProfile = profile.querySelector('.profile-link');
-
 imgProfile.addEventListener('click', function () {
 	dropdownProfile.classList.toggle('show');
 })
 
 
-
-
 // MENU
 const allMenu = document.querySelectorAll('main .content-data .head .menu');
-
 allMenu.forEach(item=> {
 	const icon = item.querySelector('.icon');
 	const menuLink = item.querySelector('.menu-link');
-
 	icon.addEventListener('click', function () {
 		menuLink.classList.toggle('show');
 	})
@@ -136,11 +120,9 @@ window.addEventListener('click', function (e) {
 			}
 		}
 	}
-
 	allMenu.forEach(item=> {
 		const icon = item.querySelector('.icon');
 		const menuLink = item.querySelector('.menu-link');
-
 		if(e.target !== icon) {
 			if(e.target !== menuLink) {
 				if (menuLink.classList.contains('show')) {
@@ -153,49 +135,152 @@ window.addEventListener('click', function (e) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modalRegistrar");
-  const btnAbrir = document.getElementById("btnAbrirModal");
-  const btnCerrar = document.getElementById("btnCerrarModal");
-  const btnCerrar2 = document.getElementById("btnCerrarModal2");
+  const ANIM_MS = 300; // debe coincidir con la duración CSS de la transición
+  // Utilidades para abrir / cerrar usando clases .show / .hide
+  function openModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('hide');
+    modal.style.display = 'flex';          // hace visible el contenedor
+    void modal.offsetWidth;                // force reflow para que la transición funcione
+    modal.classList.add('show');           // activa la transición de entrada
+  }
 
-  // Abrir modal
-  btnAbrir.addEventListener("click", () => {
-    modal.classList.remove("hide");
-    modal.style.display = "flex"; // aseguro que aparezca
-    setTimeout(() => modal.classList.add("show"), 10); // delay para animación
-  });
-
-  // Función para cerrar con animación
-  const cerrarModal = () => {
-    modal.classList.remove("show");
-    modal.classList.add("hide");
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('show');
+    modal.classList.add('hide');           // activa la transición de salida (hacia arriba)
     setTimeout(() => {
-      modal.style.display = "none";
-    }, 100); // mismo tiempo que el transition en CSS
-  };
+      modal.style.display = 'none';        // ocultar después de la animación
+      modal.classList.remove('hide');      // limpiar clase
+    }, ANIM_MS + 20);
+  }
 
-  btnCerrar.addEventListener("click", cerrarModal);
-  btnCerrar2.addEventListener("click", cerrarModal);
+  /* --------------------- Modal Registrar --------------------- */
+  const modalRegistrar = document.getElementById('modalRegistrar');
+  const btnAbrirModal = document.getElementById('btnAbrirModal');
+  const btnCerrarRegistrarA = document.getElementById('btnCerrarRegistrar');
+  const btnCerrarRegistrarB = document.getElementById('btnCerrarModal');
+  const btnCerrarRegistrar2 = document.getElementById('btnCerrarModal2');
 
-  // Cerrar si se hace clic fuera del modal
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      cerrarModal();
-    }
+  if (btnAbrirModal) {
+    btnAbrirModal.addEventListener('click', () => openModal(modalRegistrar));
+  }
+  [btnCerrarRegistrarA, btnCerrarRegistrarB, btnCerrarRegistrar2].forEach(b => {
+    if (b) b.addEventListener('click', () => closeModal(modalRegistrar));
   });
+  // click fuera para cerrar
+  window.addEventListener('click', (e) => {
+    if (e.target === modalRegistrar) closeModal(modalRegistrar);
+  });
+
+  /* --------------------- Modal Editar --------------------- */
+  const modalEditar = document.getElementById('modalEditar');
+  const btnCerrarEditar = document.getElementById('btnCerrarEditar') || document.getElementById('btnCerrarModal'); // fallback
+  const btnCancelar = document.getElementById('btnCancelar');
+  const formEditar = document.getElementById('formEditarUsuario');
+
+  // abrir modal editar al hacer click en botones .btnEditar (tabla)
+  document.querySelectorAll('.btnEditar').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.id;
+      if (!id) return console.warn('btnEditar sin data-id');
+
+      try {
+        const res = await fetch('/prodent-soporte/api/obtener_usuarios.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'id=' + encodeURIComponent(id)
+        });
+
+        if (!res.ok) throw new Error('Error en la petición: ' + res.status);
+        const data = await res.json();
+
+        // Rellenar campos (comprueba que existan)
+        const setIf = (selId, val) => {
+          const el = document.getElementById(selId);
+          if (el) el.value = (val ?? '');
+        };
+
+        setIf('edit_id', data.id_usuario ?? '');
+        setIf('edit_nombre', data.nombre_completo ?? '');
+        setIf('edit_email', data.email ?? '');
+        setIf('edit_telefono', data.telefono ?? '');
+        setIf('edit_rol', data.id_rol ?? '');
+        setIf('edit_estado', data.activo ?? '');
+
+        openModal(modalEditar);
+      } catch (err) {
+        console.error(err);
+        alert('Error al cargar datos del usuario. Revisa la consola.');
+      }
+    });
+  });
+
+  // cerrar modal editar
+  [btnCerrarEditar, btnCancelar].forEach(b => {
+    if (b) b.addEventListener('click', () => closeModal(modalEditar));
+  });
+  window.addEventListener('click', (e) => {
+    if (e.target === modalEditar) closeModal(modalEditar);
+  });
+
+  // submit del formulario de edición (AJAX)
+  if (formEditar) {
+    formEditar.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(formEditar);
+      try {
+        const res = await fetch('/prodent-soporte/api/editar_usuario.php', {
+          method: 'POST',
+          body: fd
+        });
+        const json = await res.json();
+        if (json.success) {
+          closeModal(modalEditar);
+          location.reload();
+        } else {
+          alert(json.message || 'Error al actualizar usuario');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Error al guardar. Revisa la consola.');
+      }
+    });
+  }
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-delete').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if(confirm('¿Seguro que deseas eliminar este usuario?')) {
+                var id = this.getAttribute('data-id');
+                fetch('/prodent-soporte/api/eliminar_usuario.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'id_usuario=' + encodeURIComponent(id)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        alert('Usuario eliminado correctamente');
+                        location.reload();
+                    } else {
+                        alert('Error al eliminar usuario: ' + (data.error || 'Error desconocido'));
+                    }
+                })
+                .catch(() => alert('Error de conexión'));
+            }
+        });
+    });
+});
 
 // PROGRESSBAR
 const allProgress = document.querySelectorAll('main .card .progress');
-
 allProgress.forEach(item=> {
 	item.style.setProperty('--value', item.dataset.value)
 })
-
-
-
 
 // APEXCHART
 var options = {

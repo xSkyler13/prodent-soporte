@@ -1,2 +1,102 @@
 [19-Sep-2025 08:46:53 Europe/Berlin] PHP Warning:  Undefined array key "clave" in C:\xampp\htdocs\prodent-soporte\api\login_api.php on line 31
 [19-Sep-2025 08:46:53 Europe/Berlin] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in C:\xampp\htdocs\prodent-soporte\api\login_api.php on line 31
+[24-Sep-2025 08:11:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:11:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:15:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:27:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:27:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:33:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18
+[24-Sep-2025 08:36:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql307.infinityfree.com failed: Éste es normalmente un error temporal durante la resolución de nombres de host y significa que el servidor local no recibió una respuesta de un servidor autoritativo.  in C:\xampp\htdocs\prodent-soporte\config\config.php:18
+Stack trace:
+#0 C:\xampp\htdocs\prodent-soporte\api\login_api.php(9): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\prodent-soporte\config\config.php on line 18

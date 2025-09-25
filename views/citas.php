@@ -22,6 +22,7 @@ include "../includes/header.php";
 </main>
 <!-- FullCalendar JS -->
 <script src="../assets/js/index.global.min.js"></script>
+<script src="../assets/js/es.global.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
         },
+        locale: 'es', // idioma español
         navLinks: true, // permite clickear días o semanas
         selectable: true,
         editable: true,
